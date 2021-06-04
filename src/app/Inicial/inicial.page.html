@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Aplicativo para Prestação de Serviços</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Seja bem-vindo ao aplicativo para Prestação de Serviços
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/clientes']">
+          <ion-card-title>
+            <ion-icon name="create" class="ion-float-left ion-margin-end"></ion-icon>
+            Clientes
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/prestadores']">
+          <ion-card-title>
+            <ion-icon name="people-circle" class="ion-float-left ion-margin-end"></ion-icon>
+            Prestadores de Serviços
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/servicos']">
+          <ion-card-title>
+            <ion-icon name="hammer-outline" class="ion-float-left ion-margin-end"></ion-icon>
+            Serviços
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+</ion-content>
