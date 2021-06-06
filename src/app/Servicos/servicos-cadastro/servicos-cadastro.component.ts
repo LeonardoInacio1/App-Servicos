@@ -75,7 +75,7 @@ export class ServicosCadastroComponent implements OnInit {
   ngOnInit() {
     this.clientService.getClientes().subscribe( cliente => this.clientes = cliente);
     this.prestadoresService.getPrestadores().subscribe( prestador => this.prestadores = prestador);
-    const id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
+    const id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'), 10);
     if(!isNaN(id)){
       this.servicoId = id;
       this.servicoService

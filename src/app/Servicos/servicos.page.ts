@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
-import { PrestadorService } from '../Prestadores/prestador.service';
 import { Servico } from './servico.model';
 import { ServicosService } from './servicos.service';
 
@@ -16,7 +15,6 @@ export class ServicosPage implements OnInit {
     private alertController: AlertController,
     private toastController: ToastController,
     private servicosService: ServicosService,
-    private prestadorService: PrestadorService
   ) { }
 
   ngOnInit(): void {

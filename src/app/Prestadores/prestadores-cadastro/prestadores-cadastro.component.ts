@@ -44,7 +44,7 @@ export class PrestadoresCadastroComponent implements OnInit {
 
   prestadorId: number;
   prestadoresForm: FormGroup;
-
+  especialidades;
 
   constructor(
     private toastController: ToastController,
@@ -64,7 +64,8 @@ export class PrestadoresCadastroComponent implements OnInit {
   }
 
   ngOnInit() {
-    const id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.especialidades = Object.keys(especialidade).map(item => ({ key: item, value: especialidade[item] }) );
+    const id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'), 10);
     if(!isNaN(id)){
       this.prestadorId = id;
       this.prestadorService

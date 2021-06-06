@@ -68,7 +68,7 @@
       <ion-item>
         <ion-label position="floating">Tempo estimado (h):</ion-label>
         <ion-input formControlName="tempoEstimado"
-                   type="text">
+                   type="number">
         </ion-input>
         <ion-text color="danger" *ngIf="tempoEstimado.errors">
             <small *ngIf="tempoEstimado.errors.required && (tempoEstimado.dirty || tempoEstimado.touched)">
