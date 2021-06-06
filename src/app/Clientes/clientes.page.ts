@@ -19,7 +19,6 @@ export class ClientesPage implements OnInit {
     ionViewWillEnter() {
       this.listar();
     }
-    
   ngOnInit() {}
 
   listar() {

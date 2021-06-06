@@ -52,7 +52,7 @@ export class PrestadoresCadastroComponent implements OnInit {
     private prestadorService: PrestadorService,
     private router: Router,
   ) {
-    let prestador = {
+    const prestador = {
       id: null,
       nome: '',
       dataNascimento: null,
@@ -78,23 +78,23 @@ export class PrestadoresCadastroComponent implements OnInit {
   initializaFormulario(prestador: Prestador) {
     this.prestadoresForm = new FormGroup({
       nome: new FormControl(prestador.nome, [
-        Validators.required, 
+        Validators.required,
         Validators.minLength(3),
-        Validators.maxLength(150),  
-      ]),      
+        Validators.maxLength(150),
+      ]),
       dataNascimento: new FormControl(prestador.dataNascimento),
       telefone: new FormControl(prestador.telefone),
       endereco: new FormControl(prestador.endereco, [
-        Validators.required, 
+        Validators.required,
         Validators.minLength(3),
-        Validators.maxLength(75),  
-      ]),   
+        Validators.maxLength(75),
+      ]),
       especialidade: new FormControl(prestador.especialidade, Validators.required)
-    })
+    });
   }
 
   salvar() {
-    const prestador: Prestador = {...this.prestadoresForm.value, id: this.prestadorId}
+    const prestador: Prestador = {...this.prestadoresForm.value, id: this.prestadorId};
     this.prestadorService.salvar(prestador).subscribe(
       () => this.router.navigate(['prestadores']),
       (erro) => {
@@ -114,11 +114,11 @@ export class PrestadoresCadastroComponent implements OnInit {
   get nome() {
     return this.prestadoresForm.get('nome');
   }
-  
+
   get dataNascimento() {
     return this.prestadoresForm.get('dataNascimento');
   }
-  
+
   get telefone(){
     return this.prestadoresForm.get('telefone');
   }
@@ -126,6 +126,6 @@ export class PrestadoresCadastroComponent implements OnInit {
     return this.prestadoresForm.get('endereco');
   }
   get especialidade(){
-    return this.prestadoresForm.get('especialidade')
+    return this.prestadoresForm.get('especialidade');
   }
 }

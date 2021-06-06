@@ -9,7 +9,7 @@ import { Cliente } from './cliente.model';
 })
 export class ClienteService {
 
-  private url = 'http://localhost:3000/clientes'
+  private url = 'http://localhost:3000/clientes';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,8 +17,8 @@ export class ClienteService {
     return this.httpClient.get<Cliente[]>(this.url);
   }
 
-  excluir(id:number): Observable<Object>{
-    return this.httpClient.delete(`${this.url}/${id}`)
+  excluir(id: number): Observable <Object> {
+    return this.httpClient.delete(`${this.url}/${id}`);
   }
 
   getCliente(id: number): Observable<Cliente> {

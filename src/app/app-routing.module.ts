@@ -23,7 +23,6 @@ const routes: Routes = [
     path: 'servicos',
     loadChildren: () => import('./Servicos/servicos.module').then( m => m.ServicosPageModule)
   }
-  
 ];
 
 @NgModule({

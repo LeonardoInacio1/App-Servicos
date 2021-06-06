@@ -1,0 +1,23 @@
+{
+  "clientes": [
+    {
+      "nome": "teste",
+      "dataNascimento": "2021-06-06T18:02:08.300-03:00",
+      "genero": "M",
+      "cpf": "12323",
+      "endereco": "tese",
+      "id": 1
+    }
+  ],
+  "prestadores": [
+    {
+      "nome": "teste",
+      "dataNascimento": "2021-06-06T18:03:02.155-03:00",
+      "telefone": 1231,
+      "endereco": "teste",
+      "especialidade": "A",
+      "id": 1
+    }
+  ],
+  "servicos": []
+}

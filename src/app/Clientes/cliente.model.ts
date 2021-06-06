@@ -1,4 +1,4 @@
-import { Genero } from "./genero.enum";
+import { Genero } from './genero.enum';
 
 export class Cliente{
     id?: number;
