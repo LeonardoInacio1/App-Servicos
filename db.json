@@ -1,23 +1,56 @@
 {
   "clientes": [
     {
-      "nome": "teste",
-      "dataNascimento": "2021-06-06T18:02:08.300-03:00",
+      "nome": "Cliente 1",
+      "dataNascimento": "2021-06-06T19:47:02.576-03:00",
       "genero": "M",
-      "cpf": "12323",
-      "endereco": "tese",
+      "cpf": "123",
+      "endereco": "teste",
       "id": 1
+    },
+    {
+      "nome": "Cliente 2",
+      "dataNascimento": "2021-06-06T19:47:14.796-03:00",
+      "genero": "M",
+      "cpf": "1231231",
+      "endereco": "etes",
+      "id": 2
     }
   ],
   "prestadores": [
     {
-      "nome": "teste",
-      "dataNascimento": "2021-06-06T18:03:02.155-03:00",
-      "telefone": 1231,
-      "endereco": "teste",
+      "nome": "Prestador",
+      "dataNascimento": "2021-06-06T19:47:25.774-03:00",
+      "telefone": 123123,
+      "endereco": "rawa",
       "especialidade": "A",
       "id": 1
+    },
+    {
+      "nome": "Prestador 1",
+      "dataNascimento": "2021-06-06T19:47:36.864-03:00",
+      "telefone": 1321,
+      "endereco": "adasda",
+      "especialidade": "A",
+      "id": 2
     }
   ],
-  "servicos": []
+  "servicos": [
+    {
+      "cliente": 1,
+      "prestador": 1,
+      "dataServico": "2021-06-06T19:15:04.677-03:00",
+      "descricao": "teste",
+      "tempoEstimado": "123",
+      "id": 1
+    },
+    {
+      "cliente": 1,
+      "prestador": 2,
+      "dataServico": "2021-06-06T19:47:49.466-03:00",
+      "descricao": "TESTE",
+      "tempoEstimado": "12",
+      "id": 2
+    }
+  ]
 }

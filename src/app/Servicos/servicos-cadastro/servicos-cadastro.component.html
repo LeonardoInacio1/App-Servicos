@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Cadastro de serviço</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="servicoForm">
+      <ion-item>
+        <ion-label position="floating">Cliente</ion-label>
+        <ion-select formControlName="cliente">
+          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.id">
+            {{ cliente.nome }}
+          </ion-select-option>
+          <ion-text color="danger" *ngIf="cliente.errors">
+            <small *ngIf="cliente.errors.required && (cliente.dirty || cliente.touched)">
+              O campo Cliente é obrigatório
+            </small>
+          </ion-text>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Prestador</ion-label>
+        <ion-select formControlName="prestador">
+          <ion-select-option *ngFor="let p of prestadores" [value]="p.id">
+            {{ p.nome }}
+          </ion-select-option>
+          <ion-text color="danger" *ngIf="prestador.errors">
+            <small *ngIf="prestador.errors.required && (prestador.dirty || prestador.touched)">
+              O campo Prestador é obrigatório
+            </small>
+          </ion-text>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">Data de servico: </ion-label>
+          <ion-datetime formControlName="dataServico"
+                        display-format="DD de MMMM de YYYY"
+                        min="1930-01-01"
+                        cancel-text="Cancelar"
+                        done-text="Selecionar"
+                        [monthNames]="meses"
+                        [monthShortNames]="mesesAbreviados"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descrição:</ion-label>
+        <ion-input formControlName="descricao"
+                   type="text">
+        </ion-input>
+        <ion-text color="danger" *ngIf="descricao.errors">
+            <small *ngIf="descricao.errors.required && (descricao.dirty || descricao.touched)">
+                O campo descrição é obrigatório
+            </small>
+            <small *ngIf="descricao.errors.minlength && (descricao.dirty || descricao.touched)">
+                O campo descrição deve conter no mínimo {{descricao.errors.minlength.requiredLength}} caracteres
+            </small>
+            <small *ngIf="descricao.errors.maxlength && (descricao.dirty || descricao.touched)">
+                O campo descrição deve conter no máximo {{endereco.errors.maxlength.requiredLength}} caracteres
+            </small>
+        </ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Tempo estimado (h):</ion-label>
+        <ion-input formControlName="tempoEstimado"
+                   type="text">
+        </ion-input>
+        <ion-text color="danger" *ngIf="tempoEstimado.errors">
+            <small *ngIf="tempoEstimado.errors.required && (tempoEstimado.dirty || tempoEstimado.touched)">
+                O campo tempo estimado é obrigatório
+            </small>
+        </ion-text>
+      </ion-item>
+
+      <ion-fab vertical="bottom"
+               horizontal="end">
+          <ion-fab-button (click)="salvar()" [disabled]="!servicoForm.valid">
+              <ion-icon name="checkmark-outline"></ion-icon>
+          </ion-fab-button>
+      </ion-fab>
+  </form>
+</ion-content>
