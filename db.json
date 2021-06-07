@@ -15,32 +15,32 @@
       "cpf": "1231231",
       "endereco": "etes",
       "id": 2
+    },
+    {
+      "nome": "Inácio",
+      "dataNascimento": "2021-06-07T18:59:34.093-03:00",
+      "genero": "M",
+      "cpf": "000-000-000-01",
+      "endereco": "rua",
+      "id": 3
     }
   ],
   "prestadores": [
     {
-      "nome": "Prestador",
-      "dataNascimento": "2021-06-06T19:47:25.774-03:00",
-      "telefone": 123123,
-      "endereco": "rawa",
+      "nome": "prestador",
+      "dataNascimento": "2021-06-07T20:16:04.782-03:00",
+      "telefone": 124124,
+      "endereco": "sadads",
       "especialidade": "A",
       "id": 1
     },
     {
-      "nome": "Prestador 1",
-      "dataNascimento": "2021-06-06T19:47:36.864-03:00",
-      "telefone": 1321,
-      "endereco": "adasda",
-      "especialidade": "A",
+      "nome": "dasd",
+      "dataNascimento": "2021-07-07T20:16:26.261-03:00",
+      "telefone": 12,
+      "endereco": "fsdafas",
+      "especialidade": "C",
       "id": 2
-    },
-    {
-      "nome": "teste",
-      "dataNascimento": "2021-06-06T20:06:15.187-03:00",
-      "telefone": 310,
-      "endereco": "teste",
-      "especialidade": "AS",
-      "id": 3
     }
   ],
   "servicos": [
@@ -56,7 +56,7 @@
       "cliente": 1,
       "prestador": 2,
       "dataServico": "2021-06-06T19:47:49.466-03:00",
-      "descricao": "TESTE",
+      "descricao": "TESTE1",
       "tempoEstimado": "12",
       "id": 2
     }
