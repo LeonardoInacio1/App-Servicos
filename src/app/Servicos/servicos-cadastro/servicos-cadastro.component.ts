@@ -110,6 +110,7 @@ export class ServicosCadastroComponent implements OnInit {
 
   salvar() {
     const servico: Servico = {...this.servicoForm.value, id: this.servicoId};
+    servico.dataServico = servico.dataServico.toString().split('T')[0];
     this.servicoService.salvar(servico).subscribe(
       () => this.router.navigate(['servicos']),
       (erro) => {

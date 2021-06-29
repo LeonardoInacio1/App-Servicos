@@ -93,6 +93,7 @@ export class ClientesCadastroComponent implements OnInit {
 
     salvar() {
       const cliente: Cliente = {...this.clientesForm.value, id: this.clienteId}
+      cliente.dataNascimento = cliente.dataNascimento.toString().split('T')[0];
       this.clienteService.salvar(cliente).subscribe(
         () => this.router.navigate(['clientes']),
         (erro) => {

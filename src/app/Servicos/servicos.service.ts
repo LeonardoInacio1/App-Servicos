@@ -8,7 +8,7 @@ import { Servico } from './servico.model';
 })
 export class ServicosService {
 
-  private url = 'http://localhost:3000/servicos';
+  private url = 'http://localhost:8080/TrabalhoServicos/api/servicos';
 
   constructor(
     private httpClient: HttpClient
@@ -35,6 +35,7 @@ export class ServicosService {
   }
 
   private adicionar(servico: Servico)  {
+    console.log(servico) ;
     return this.httpClient.post(this.url, servico);
   }
 

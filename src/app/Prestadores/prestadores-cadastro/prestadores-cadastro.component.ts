@@ -56,7 +56,7 @@ export class PrestadoresCadastroComponent implements OnInit {
       id: null,
       nome: '',
       dataNascimento: null,
-      telefone: 0,
+      telefone: '',
       endereco: '',
       especialidade: especialidade.ADVOGADO,
     };
@@ -96,6 +96,7 @@ export class PrestadoresCadastroComponent implements OnInit {
 
   salvar() {
     const prestador: Prestador = {...this.prestadoresForm.value, id: this.prestadorId};
+    prestador.dataNascimento = prestador.dataNascimento.toString().split('T')[0];
     this.prestadorService.salvar(prestador).subscribe(
       () => this.router.navigate(['prestadores']),
       (erro) => {

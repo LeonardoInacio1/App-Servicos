@@ -5,7 +5,7 @@ export class Servico {
     id?: number;
     cliente: Cliente;
     prestador: Prestador;
-    dataServico: Date;
+    dataServico: Date | string; 
     descricao: string;
     tempoEstimado: string;
 }

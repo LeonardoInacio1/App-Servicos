@@ -11,7 +11,7 @@
       <ion-item>
         <ion-label position="floating">Cliente</ion-label>
         <ion-select formControlName="cliente">
-          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.id">
+          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente">
             {{ cliente.nome }}
           </ion-select-option>
           <ion-text color="danger" *ngIf="cliente.errors">
@@ -25,7 +25,7 @@
       <ion-item>
         <ion-label position="floating">Prestador</ion-label>
         <ion-select formControlName="prestador">
-          <ion-select-option *ngFor="let p of prestadores" [value]="p.id">
+          <ion-select-option *ngFor="let p of prestadores" [value]="p">
             {{ p.nome }}
           </ion-select-option>
           <ion-text color="danger" *ngIf="prestador.errors">

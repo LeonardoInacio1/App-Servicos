@@ -9,7 +9,7 @@ import { Cliente } from './cliente.model';
 })
 export class ClienteService {
 
-  private url = 'http://localhost:3000/clientes';
+  private url = 'http://localhost:8080/TrabalhoServicos/api/clientes';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -26,6 +26,7 @@ export class ClienteService {
   }
 
   private adicionar(cliente: Cliente)  {
+    console.log(cliente);
     return this.httpClient.post(this.url, cliente);
   }
   private atualizar(cliente: Cliente) {
