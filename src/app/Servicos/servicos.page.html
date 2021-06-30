@@ -9,24 +9,14 @@
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let servico of servicos">
+    <ion-item-sliding style="border: 1px solid rgb(113, 0, 0); margin-top: 10px;" *ngFor="let servico of servicos">
 
-      <!-- <ion-item *ngFor="let servico of servicos">
-        <ion-label>{{servico.id}}</ion-label>
-        <ion-buttons>
-          <ion-button color="primary" [routerLink]="['edicao', servico.id]">
-            <ion-icon name="create" slot="icon-only"></ion-icon>
-          </ion-button>
-          <ion-button color="primary" (click)="confirmarExclusao(servico)">
-            <ion-icon name="trash"  slot="icon-only"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-item> -->
       <ion-item>
         <ion-label>
           <ion-text>
-            <h2>Cliente: {{servico.cliente.nome}}</h2>
+            <strong>Cliente: {{servico.cliente.nome}}</strong>
           </ion-text>
+          <hr>
           <ion-text>
             <p>Prestador: {{ servico.prestador.nome }}</p>
           </ion-text>
@@ -63,5 +53,7 @@
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+
+  <img class="servicesPage" src="https://img.icons8.com/ios/452/service.png">
 
 </ion-content>

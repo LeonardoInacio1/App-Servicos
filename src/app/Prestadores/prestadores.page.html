@@ -9,23 +9,13 @@
 
 <ion-content>
   <ion-list>
-  <ion-item-sliding *ngFor="let prestador of prestadores">
-      <!-- <ion-label>{{prestador.nome}}</ion-label>
-      <ion-buttons>
-        <ion-button color="primary" [routerLink]="['edicao', prestador.id]">
-          <ion-icon name="create" slot="icon-only"></ion-icon> 
-        </ion-button>
-        <ion-button color="primary" (click)="confirmarExclusao(prestador)">
-          <ion-icon name="trash"  slot="icon-only"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item> -->
-
+  <ion-item-sliding style="border: 1px solid rgb(113, 0, 0); margin-top: 10px;" *ngFor="let prestador of prestadores">
     <ion-item>
       <ion-label>
         <ion-text>
-          <p>Nome: {{prestador.nome}}</p>
+          <strong>Nome: {{prestador.nome}}</strong>
         </ion-text>
+        <hr>
         <ion-text>
           <p>Data de Nascimento: {{ (prestador.dataNascimento)}}</p>
         </ion-text>
@@ -36,18 +26,12 @@
           <p>Endereco: {{prestador.endereco}}</p>
         </ion-text>
         <ion-text>
-          <p>Especialidade: {{prestador.especialidade}}</p>
+          <p>Especialidade: {{descricaoEspecialidade[prestador.especialidade]}}</p>
         </ion-text>
       </ion-label>
+
+      <img height="80vh" style="opacity: 50%;" src="{{imagensSERVICO[prestador.especialidade]}}" alt="">
     </ion-item>
-
-  <!-- <ion-fab vertical="bottom" horizontal="end">
-    <ion-fab-button [routerLink]="['cadastro']">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
-</ion-content> -->
 
 <ion-item-options side="end">
   <ion-item-option (click)="confirmarExclusao(prestador)">
@@ -69,5 +53,7 @@
 <ion-icon name="add"></ion-icon>
 </ion-fab-button>
 </ion-fab>
+
+<img class="prestadoresPage" src="https://i.pinimg.com/originals/41/19/21/4119215caa217be87933ccd54cfd6e1f.png"/>
 
 </ion-content>
