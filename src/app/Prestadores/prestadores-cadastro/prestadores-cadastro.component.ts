@@ -102,7 +102,7 @@ export class PrestadoresCadastroComponent implements OnInit {
       (erro) => {
         console.error(erro);
         this.toastController.create({
-          message: `Não foi possível salvar o prestador de serviços ${prestador.nome}`,
+          message: `${"Não foi possível salvar o prestador de serviços ${prestador.nome}"}`,
           duration: 5000,
           keyboardClose: true,
           color: 'danger'

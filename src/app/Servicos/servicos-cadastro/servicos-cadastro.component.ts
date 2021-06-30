@@ -116,7 +116,7 @@ export class ServicosCadastroComponent implements OnInit {
       (erro) => {
         console.error(erro);
         this.toastController.create({
-          message: `Não foi possível salvar o servico de serviços!`,
+          message: `${erro.error}`,
           duration: 5000,
           keyboardClose: true,
           color: 'danger'
