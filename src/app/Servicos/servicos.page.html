@@ -25,10 +25,10 @@
       <ion-item>
         <ion-label>
           <ion-text>
-            <h2>Cliente: {{servico.cliente}}</h2>
+            <h2>Cliente: {{servico.cliente.nome}}</h2>
           </ion-text>
           <ion-text>
-            <p>Prestador: {{ servico.prestador }}</p>
+            <p>Prestador: {{ servico.prestador.nome }}</p>
           </ion-text>
           <ion-text>
             <p>Data do Serviço: {{ formatDate(servico.dataServico) }}</p>

@@ -34,6 +34,7 @@ export class ClienteService {
   }
 
   salvar(cliente: Cliente) {
+    console.log(cliente);
     if(cliente.id) {
       return this.atualizar(cliente);
     } else {
