@@ -110,7 +110,6 @@ export class PrestadoresCadastroComponent implements OnInit {
       }
     );
 
-    this.router.navigate(['prestadores']);
   }
 
   get nome() {
